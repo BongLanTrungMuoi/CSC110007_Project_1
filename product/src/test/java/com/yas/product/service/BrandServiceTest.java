@@ -166,23 +166,6 @@ class BrandServiceTest {
         verify(brandRepository, never()).deleteById(anyLong());
     }
 
-    // @Test
-    // @DisplayName("Cập nhật brand thất bại khi tên đã tồn tại")
-    // void test_update_brand_duplicate_name() {
-
-    //     BrandPostVm vm = new BrandPostVm("Apple", "apple-slug", true);
-
-    //     when(brandRepository.findById(1L))
-    //             .thenReturn(Optional.of(brand));
-
-    //     when(brandRepository.findExistedName("Apple", 1L))
-    //             .thenReturn(new Brand());
-
-    //     assertThrows(DuplicatedException.class,
-    //             () -> brandService.update(vm, 1L));
-
-    //     verify(brandRepository, never()).save(any());
-    // }
     @Test
     @DisplayName("Lấy brand theo ids khi không có dữ liệu")
     void test_getBrandsByIds_empty_result() {
